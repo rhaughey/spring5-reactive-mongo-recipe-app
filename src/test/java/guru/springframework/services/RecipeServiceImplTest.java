@@ -99,14 +99,13 @@ public class RecipeServiceImplTest {
         verify(recipeReactiveRepository, never()).findById(anyString());
     }
 
-/*    @Test
-    @Ignore
+    @Test
     public void testDeleteById() throws Exception {
 
         //given
         String idToDelete = "2";
 
-        when(recipeReactiveRepository.deleteById(anyString()).thenReturn(Mono.empty()));
+        when(recipeReactiveRepository.deleteById(anyString())).thenReturn(Mono.empty());
 
         //when
         recipeService.deleteById(idToDelete);
@@ -115,5 +114,5 @@ public class RecipeServiceImplTest {
 
         //then
         verify(recipeReactiveRepository, times(1)).deleteById(anyString());
-    }*/
+    }
 }
